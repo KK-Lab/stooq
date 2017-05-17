@@ -14,4 +14,12 @@ class StockListViewModel {
     init() {
         self.stocksObservable = Observable([])
     }
+    
+    func stopTimer() {
+        
+    }
+    
+    func startTimer() {
+        
+    }
 }

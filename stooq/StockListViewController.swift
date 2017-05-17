@@ -30,6 +30,12 @@ class StockListViewController: UITableViewController {
         self.setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.viewModel?.startTimer()
+    }
+    
 }
 
 extension StockListViewController {
