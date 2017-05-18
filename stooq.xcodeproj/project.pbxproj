@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C79D7AD50D8741CDD5F380A3 /* Pods_stooq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E730C11FC36B74D77EFCC051 /* Pods_stooq.framework */; };
 		E2A10B641ECC9CC600A967BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B631ECC9CC600A967BA /* AppDelegate.swift */; };
 		E2A10B6B1ECC9CC600A967BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */; };
 		E2A10B6E1ECC9CC600A967BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B6C1ECC9CC600A967BA /* LaunchScreen.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3794958692673E14D8319F1C /* Pods-stooq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stooq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stooq/Pods-stooq.debug.xcconfig"; sourceTree = "<group>"; };
+		A8860ECC38AD8E4D373EDCEC /* Pods-stooq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stooq.release.xcconfig"; path = "Pods/Target Support Files/Pods-stooq/Pods-stooq.release.xcconfig"; sourceTree = "<group>"; };
 		E2A10B601ECC9CC600A967BA /* stooq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stooq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A10B631ECC9CC600A967BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		E2A10B7A1ECCD31700A967BA /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		E2A10B7C1ECCD35100A967BA /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		E2A10B7E1ECCD5A600A967BA /* StockListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListCell.swift; sourceTree = "<group>"; };
+		E730C11FC36B74D77EFCC051 /* Pods_stooq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stooq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79D7AD50D8741CDD5F380A3 /* Pods_stooq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FECF651126C279E4434FA08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E730C11FC36B74D77EFCC051 /* Pods_stooq.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E2A10B571ECC9CC600A967BA = {
 			isa = PBXGroup;
 			children = (
 				E2A10B621ECC9CC600A967BA /* stooq */,
 				E2A10B611ECC9CC600A967BA /* Products */,
+				F87A7C21C34F6269525E3284 /* Pods */,
+				9FECF651126C279E4434FA08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +96,15 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		F87A7C21C34F6269525E3284 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3794958692673E14D8319F1C /* Pods-stooq.debug.xcconfig */,
+				A8860ECC38AD8E4D373EDCEC /* Pods-stooq.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2A10B721ECC9CC600A967BA /* Build configuration list for PBXNativeTarget "stooq" */;
 			buildPhases = (
+				247D792E63D961431FD5B947 /* [CP] Check Pods Manifest.lock */,
 				E2A10B5C1ECC9CC600A967BA /* Sources */,
 				E2A10B5D1ECC9CC600A967BA /* Frameworks */,
 				E2A10B5E1ECC9CC600A967BA /* Resources */,
+				3766FF8854B7D960ECC30148 /* [CP] Embed Pods Frameworks */,
+				72EA4393CF342713624A943D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		247D792E63D961431FD5B947 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3766FF8854B7D960ECC30148 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stooq/Pods-stooq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72EA4393CF342713624A943D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stooq/Pods-stooq-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2A10B5C1ECC9CC600A967BA /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		E2A10B731ECC9CC600A967BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3794958692673E14D8319F1C /* Pods-stooq.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -284,6 +360,7 @@
 		};
 		E2A10B741ECC9CC600A967BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8860ECC38AD8E4D373EDCEC /* Pods-stooq.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
