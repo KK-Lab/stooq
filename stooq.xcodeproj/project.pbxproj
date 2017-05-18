@@ -16,6 +16,7 @@
 		E2A10B7B1ECCD31700A967BA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B7A1ECCD31700A967BA /* Observable.swift */; };
 		E2A10B7D1ECCD35100A967BA /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B7C1ECCD35100A967BA /* Stock.swift */; };
 		E2A10B7F1ECCD5A600A967BA /* StockListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B7E1ECCD5A600A967BA /* StockListCell.swift */; };
+		E2A10B811ECDA43100A967BA /* SupportedStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B801ECDA43100A967BA /* SupportedStock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E2A10B7A1ECCD31700A967BA /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		E2A10B7C1ECCD35100A967BA /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		E2A10B7E1ECCD5A600A967BA /* StockListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListCell.swift; sourceTree = "<group>"; };
+		E2A10B801ECDA43100A967BA /* SupportedStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedStock.swift; sourceTree = "<group>"; };
 		E730C11FC36B74D77EFCC051 /* Pods_stooq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stooq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				E2A10B771ECCD2D100A967BA /* StockListViewController.swift */,
 				E2A10B751ECCD2BE00A967BA /* StockListViewModel.swift */,
 				E2A10B7C1ECCD35100A967BA /* Stock.swift */,
+				E2A10B801ECDA43100A967BA /* SupportedStock.swift */,
 				E2A10B7A1ECCD31700A967BA /* Observable.swift */,
 				E2A10B791ECCD2D800A967BA /* Support */,
 			);
@@ -233,6 +236,7 @@
 				E2A10B761ECCD2BE00A967BA /* StockListViewModel.swift in Sources */,
 				E2A10B7D1ECCD35100A967BA /* Stock.swift in Sources */,
 				E2A10B641ECC9CC600A967BA /* AppDelegate.swift in Sources */,
+				E2A10B811ECDA43100A967BA /* SupportedStock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +396,7 @@
 				E2A10B741ECC9CC600A967BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
