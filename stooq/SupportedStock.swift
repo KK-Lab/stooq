@@ -35,6 +35,17 @@ enum SupportedStock: String {
         return htmlComponentId
     }
     
+    var previousValue: Double? {
+        set {
+            UserDefaults.standard.set(newValue, forKey: self.rawValue)
+            UserDefaults.standard.synchronize()
+        }
+        get {
+            let previousValue = UserDefaults.standard.value(forKey: self.rawValue) as? Double
+            return previousValue
+        }
+    }
+    
     static func validate(value: String, withSupportedStocks supportedStocks: [SupportedStock]) -> Bool {
         var isValid: Bool = false
         

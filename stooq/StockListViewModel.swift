@@ -10,6 +10,16 @@ import Foundation
 import Kanna
 
 class StockListViewModel {
+    fileprivate var updateDate: Date?
+    fileprivate var timer: Timer?
+    fileprivate let timeInterval: TimeInterval = 30.0
+    
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss"
+        return dateFormatter
+    }()
+   
     let stocksObservable: Observable<[Stock]>
     
     var updateTime: String? {
@@ -21,16 +31,6 @@ class StockListViewModel {
         
         return updateTime
     }
-    
-    fileprivate var updateDate: Date?
-    fileprivate var timer: Timer?
-    fileprivate let timeInterval: TimeInterval = 5.0 // TODO: 30
-    
-    fileprivate lazy var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm:ss"
-        return dateFormatter
-    }()
     
     init() {
         self.stocksObservable = Observable([])
@@ -66,7 +66,6 @@ fileprivate extension StockListViewModel {
                         let stocks = Stock.stocks(fromArray: stocksArray, supportedStocks: SupportedStock.all)
                         self.updateStocks(stocks: stocks)
                     }
-                    
                 })
             }
             // TODO: handle error
@@ -97,6 +96,7 @@ fileprivate extension StockListViewModel {
     }
     
     func updateStocks(stocks: [Stock]) {
+        self.stocksObservable.value.forEach { $0.savePreviousValue() } // TODO: check it
         self.updateDate = Date()
         self.stocksObservable.value = stocks
     }

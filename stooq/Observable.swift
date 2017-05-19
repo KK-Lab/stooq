@@ -1,9 +1,9 @@
 //
 //  Observable.swift
-//  Sgrouples
+//  stooq
 //
-//  Created by Krzysztof Kaczmarek on 11.11.2015.
-//
+//  Created by Krzysztof Kaczmarek on 18.05.2017.
+//  Copyright © 2017 KK-Lab. All rights reserved.
 //
 
 import Foundation

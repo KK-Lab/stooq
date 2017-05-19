@@ -47,7 +47,8 @@ extension StockListViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: StockListCell = tableView.dequeueReusableCell(withIdentifier: StockListCell.identifier, for: indexPath) as! StockListCell
-        cell.stock = self.stocks[indexPath.row]
+        let stock: Stock = self.stocks[indexPath.row]
+        cell.stock = stock
         
         return cell
     }
