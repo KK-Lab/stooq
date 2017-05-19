@@ -31,7 +31,7 @@ class StockListViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.viewModel?.startTimer()
+        self.viewModel?.fetchStocksAndStartTimer()
     }
 }
 

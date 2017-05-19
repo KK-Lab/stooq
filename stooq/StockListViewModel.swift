@@ -36,6 +36,11 @@ class StockListViewModel {
         self.stocksObservable = Observable([])
     }
     
+    func fetchStocksAndStartTimer() {
+        self.fetchStocks()
+        self.startTimer()
+    }
+    
     func startTimer() {
         self.timer = Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true) { [weak self] _ in
             self?.fetchStocks()
