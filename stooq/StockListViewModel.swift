@@ -12,14 +12,32 @@ import Kanna
 class StockListViewModel {
     let stocksObservable: Observable<[Stock]>
     
+    var updateTime: String? {
+        var updateTime: String? = nil
+        
+        if let updateDate = self.updateDate {
+            updateTime = self.dateFormatter.string(from: updateDate)
+        }
+        
+        return updateTime
+    }
+    
+    fileprivate var updateDate: Date?
     fileprivate var timer: Timer?
+    fileprivate let timeInterval: TimeInterval = 5.0 // TODO: 30
+    
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss"
+        return dateFormatter
+    }()
     
     init() {
         self.stocksObservable = Observable([])
     }
     
     func startTimer() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
+        self.timer = Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true) { [weak self] _ in
             self?.fetchStocks()
         }
     }
@@ -40,7 +58,8 @@ fileprivate extension StockListViewModel {
             if let data = data, let html = String(data: data, encoding: .utf8) {
                 self.parse(html: html, completion: { stocksArray in
                     DispatchQueue.main.async {
-                        self.stocksObservable.value = Stock.stocks(fromArray: stocksArray, supportedStocks: SupportedStock.all)
+                        let stocks = Stock.stocks(fromArray: stocksArray, supportedStocks: SupportedStock.all)
+                        self.updateStocks(stocks: stocks)
                     }
                     
                 })
@@ -70,5 +89,10 @@ fileprivate extension StockListViewModel {
         guard let stocksArray = tbody.first?.css("tr").map({ $0.css("td").flatMap { $0.content } }) else { return }
         
         completion(stocksArray)
+    }
+    
+    func updateStocks(stocks: [Stock]) {
+        self.updateDate = Date()
+        self.stocksObservable.value = stocks
     }
 }

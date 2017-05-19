@@ -11,14 +11,11 @@ import UIKit
 
 class StockListViewController: UITableViewController {
     fileprivate var stocks: [Stock] = []
-    fileprivate var updatedTime: Date?
     
     var viewModel: StockListViewModel? {
         didSet {
             viewModel?.stocksObservable.bind { stocks in
                 self.stocks = stocks
-                self.updatedTime = Date()
-                
                 self.tableView.reloadData()
             }
         }
@@ -35,7 +32,7 @@ class StockListViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         self.viewModel?.startTimer()
-    }    
+    }
 }
 
 extension StockListViewController {
@@ -53,6 +50,28 @@ extension StockListViewController {
         cell.stock = self.stocks[indexPath.row]
         
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let updateTime = self.viewModel?.updateTime else { return nil }
+        
+        let headerFrame = CGRect(x: 0, y: 5, width: UIScreen.main.bounds.width, height: 35)
+        let view = UIView(frame: headerFrame)
+        view.backgroundColor = UIColor.black
+        
+        let label = UILabel(frame: headerFrame)
+        label.font = UIFont.italicSystemFont(ofSize: 14)
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.text = "Updated at: " + updateTime
+        
+        view.addSubview(label)
+        
+        return view
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.viewModel?.updateTime == nil ? 0 : 40
     }
 }
 
