@@ -27,6 +27,7 @@ class StockListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupNavigationBar()
         self.setupTableView()
     }
     
@@ -34,8 +35,7 @@ class StockListViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         self.viewModel?.startTimer()
-    }
-    
+    }    
 }
 
 extension StockListViewController {
@@ -58,7 +58,22 @@ extension StockListViewController {
 
 fileprivate extension StockListViewController {
     
+    func setupNavigationBar() {
+        self.title = "stooq.pl"
+        self.navigationController?.navigationBar.barTintColor = UIColor.black
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barStyle = .blackTranslucent
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor.white,
+            NSFontAttributeName: UIFont.italicSystemFont(ofSize: 23)
+        ]
+    }
+    
     func setupTableView() {
+        self.tableView.separatorColor = UIColor.darkGray
+        self.tableView.backgroundColor = UIColor.black
+        self.tableView.rowHeight = StockListCell.height
+        
         StockListCell.register(for: self.tableView)
     }
 }
