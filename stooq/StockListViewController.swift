@@ -104,6 +104,8 @@ fileprivate extension StockListViewController {
     }
     
     func showAlert() {
-        // TODO: show alertVC and then self.viewModel?.fetchStocksAndStartTimer()
+        let alert = UIAlertController(title: "Error", message: "Something went wrong. Check your network connection and click OK to try again", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { _ in self.viewModel?.fetchStocksAndStartTimer() }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

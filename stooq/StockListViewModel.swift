@@ -35,7 +35,7 @@ class StockListViewModel {
     }
     
     convenience init() {
-        self.init(networkingManager: StockNetworkingManager(), htmlParser: StockHTMLParser(), timer: StockTimer(timeInterval: 30))
+        self.init(networkingManager: StockNetworkingManager(), htmlParser: StockHTMLParser(), timer: StockTimer(timeInterval: 30.0))
     }
     
     init(networkingManager: NetworkingManagerProtocol, htmlParser: HTMLParserProtocol, timer: TimerProtocol) {
