@@ -11,8 +11,9 @@ import Kanna
 
 class StockListViewModel {
     fileprivate var updateDate: Date?
-    fileprivate var timer: Timer?
-    fileprivate let timeInterval: TimeInterval = 30.0
+    fileprivate let timer: TimerProtocol
+    fileprivate let networkingManager: NetworkingManagerProtocol
+    fileprivate let htmlParser: HTMLParserProtocol
     
     fileprivate lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -21,6 +22,7 @@ class StockListViewModel {
     }()
    
     let stocksObservable: Observable<[Stock]>
+    let errorObservable: Observable<Bool>
     
     var updateTime: String? {
         var updateTime: String? = nil
@@ -32,8 +34,18 @@ class StockListViewModel {
         return updateTime
     }
     
-    init() {
+    convenience init() {
+        self.init(networkingManager: StockNetworkingManager(), htmlParser: StockHTMLParser(), timer: StockTimer(timeInterval: 30))
+    }
+    
+    init(networkingManager: NetworkingManagerProtocol, htmlParser: HTMLParserProtocol, timer: TimerProtocol) {
         self.stocksObservable = Observable([])
+        self.errorObservable = Observable(false)
+        
+        self.networkingManager = networkingManager
+        self.htmlParser = htmlParser
+        self.timer = timer
+        self.timer.attachCompletion { [weak self] in self?.fetchStocks() }
     }
     
     func fetchStocksAndStartTimer() {
@@ -42,61 +54,31 @@ class StockListViewModel {
     }
     
     func startTimer() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true) { [weak self] _ in
-            self?.fetchStocks()
-        }
+        self.timer.start()
     }
     
     func stopTimer() {
-        self.timer?.invalidate()
-        self.timer = nil
+        self.timer.stop()
     }
 }
 
 fileprivate extension StockListViewModel {
     
     func fetchStocks() {
-        let url = URL(string: "https://stooq.pl")
-        let request = URLRequest(url: url!)
+        guard let url = URL(string: "https://stooq.pl") else { return }
 
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-            if let data = data, let html = String(data: data, encoding: .utf8) {
-                self.parse(html: html, completion: { stocksArray in
-                    DispatchQueue.main.async {
-                        let stocks = Stock.stocks(fromArray: stocksArray, supportedStocks: SupportedStock.all)
-                        self.updateStocks(stocks: stocks)
-                    }
-                })
-            }
-            // TODO: handle error
-            
-        })
-        task.resume()
-    }
-    
-    func parse(html: String, completion: ([[String]]) -> Void) {
-        guard let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) else { return }
+        let failure: () -> Void = { [weak self] in self?.errorObservable.value = true }
         
-        let tbody = doc.css("tbody[id='f13']").filter {
-            if let tbodyHTML = $0.toHTML {
-                return
-                    tbodyHTML.contains(SupportedStock.wig.htmlComponentId) &&
-                    tbodyHTML.contains(SupportedStock.wig20.htmlComponentId) &&
-                    tbodyHTML.contains(SupportedStock.mWIG40.htmlComponentId) &&
-                    tbodyHTML.contains(SupportedStock.sWIG80.htmlComponentId)
-            }
-            else {
-                return false
-            }
-            
-        }
-        guard let stocksArray = tbody.first?.css("tr").map({ $0.css("td").flatMap { $0.content } }) else { return }
-        
-        completion(stocksArray)
+        self.networkingManager.requestWebsite(from: url, success: { [weak self] html in
+            self?.htmlParser.parse(html: html, success: { [weak self] stocksArray in
+                let stocks = Stock.stocks(fromArray: stocksArray, supportedStocks: SupportedStock.all)
+                self?.updateStocks(stocks: stocks)
+            }, failure: failure)
+        }, failure: failure)
     }
     
     func updateStocks(stocks: [Stock]) {
-        self.stocksObservable.value.forEach { $0.savePreviousValue() } // TODO: check it
+        self.stocksObservable.value.forEach { $0.savePreviousValue() }
         self.updateDate = Date()
         self.stocksObservable.value = stocks
     }

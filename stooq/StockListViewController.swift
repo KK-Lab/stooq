@@ -14,10 +14,16 @@ class StockListViewController: UITableViewController {
     
     var viewModel: StockListViewModel? {
         didSet {
-            viewModel?.stocksObservable.bind { stocks in
-                self.stocks = stocks
-                self.tableView.reloadData()
+            viewModel?.stocksObservable.bind { [weak self] stocks in
+                self?.stocks = stocks
+                self?.tableView.reloadData()
             }
+            viewModel?.errorObservable.bind({ [weak self] error in
+                if error {
+                    self?.viewModel?.stopTimer()
+                    self?.showAlert()
+                }
+            })
         }
     }
     
@@ -95,5 +101,9 @@ fileprivate extension StockListViewController {
         self.tableView.rowHeight = StockListCell.height
         
         StockListCell.register(for: self.tableView)
+    }
+    
+    func showAlert() {
+        // TODO: show alertVC and then self.viewModel?.fetchStocksAndStartTimer()
     }
 }

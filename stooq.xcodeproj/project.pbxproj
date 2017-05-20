@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		578A791F81638C5943246413 /* Pods_stooqTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230ECBE9F334DDA61217218F /* Pods_stooqTests.framework */; };
 		C79D7AD50D8741CDD5F380A3 /* Pods_stooq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E730C11FC36B74D77EFCC051 /* Pods_stooq.framework */; };
+		E219C4321ED02D4B00A27444 /* StockListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4311ED02D4B00A27444 /* StockListViewModelTests.swift */; };
+		E219C4341ED0331A00A27444 /* StockHTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4331ED0331A00A27444 /* StockHTMLParser.swift */; };
+		E219C4361ED0332F00A27444 /* StockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4351ED0332F00A27444 /* StockNetworkingManager.swift */; };
+		E219C4381ED0333A00A27444 /* StockTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4371ED0333A00A27444 /* StockTimer.swift */; };
+		E219C43C1ED05D7E00A27444 /* website.html in Resources */ = {isa = PBXBuildFile; fileRef = E219C43B1ED05D7E00A27444 /* website.html */; };
+		E219C43E1ED05F4300A27444 /* StockHTMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C43D1ED05F4300A27444 /* StockHTMLParserTests.swift */; };
+		E219C4411ED0626500A27444 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4401ED0626500A27444 /* MockNetworkingManager.swift */; };
+		E219C4431ED0676F00A27444 /* MockStockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4421ED0676F00A27444 /* MockStockListViewController.swift */; };
+		E219C4451ED068C600A27444 /* MockHTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4441ED068C600A27444 /* MockHTMLParser.swift */; };
+		E219C4471ED0698300A27444 /* MockTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4461ED0698300A27444 /* MockTimer.swift */; };
+		E219C4491ED078ED00A27444 /* StockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4481ED078ED00A27444 /* StockTests.swift */; };
 		E2A10B641ECC9CC600A967BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B631ECC9CC600A967BA /* AppDelegate.swift */; };
 		E2A10B6B1ECC9CC600A967BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */; };
 		E2A10B6E1ECC9CC600A967BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B6C1ECC9CC600A967BA /* LaunchScreen.storyboard */; };
@@ -39,6 +50,17 @@
 		E0FF2455C9F2BF70EA327B57 /* Pods-stooqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stooqTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stooqTests/Pods-stooqTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E219C4271ED02C7700A27444 /* stooqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stooqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E219C42B1ED02C7700A27444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E219C4311ED02D4B00A27444 /* StockListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListViewModelTests.swift; sourceTree = "<group>"; };
+		E219C4331ED0331A00A27444 /* StockHTMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockHTMLParser.swift; sourceTree = "<group>"; };
+		E219C4351ED0332F00A27444 /* StockNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockNetworkingManager.swift; sourceTree = "<group>"; };
+		E219C4371ED0333A00A27444 /* StockTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTimer.swift; sourceTree = "<group>"; };
+		E219C43B1ED05D7E00A27444 /* website.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = website.html; sourceTree = "<group>"; };
+		E219C43D1ED05F4300A27444 /* StockHTMLParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockHTMLParserTests.swift; sourceTree = "<group>"; };
+		E219C4401ED0626500A27444 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
+		E219C4421ED0676F00A27444 /* MockStockListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockStockListViewController.swift; sourceTree = "<group>"; };
+		E219C4441ED068C600A27444 /* MockHTMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTMLParser.swift; sourceTree = "<group>"; };
+		E219C4461ED0698300A27444 /* MockTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimer.swift; sourceTree = "<group>"; };
+		E219C4481ED078ED00A27444 /* StockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTests.swift; sourceTree = "<group>"; };
 		E2A10B601ECC9CC600A967BA /* stooq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stooq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A10B631ECC9CC600A967BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,9 +108,45 @@
 		E219C4281ED02C7700A27444 /* stooqTests */ = {
 			isa = PBXGroup;
 			children = (
+				E219C43F1ED0625100A27444 /* Mocks */,
+				E219C4311ED02D4B00A27444 /* StockListViewModelTests.swift */,
+				E219C43D1ED05F4300A27444 /* StockHTMLParserTests.swift */,
+				E219C4481ED078ED00A27444 /* StockTests.swift */,
 				E219C42B1ED02C7700A27444 /* Info.plist */,
+				E219C43B1ED05D7E00A27444 /* website.html */,
 			);
 			path = stooqTests;
+			sourceTree = "<group>";
+		};
+		E219C4391ED0334700A27444 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E219C4351ED0332F00A27444 /* StockNetworkingManager.swift */,
+				E219C4331ED0331A00A27444 /* StockHTMLParser.swift */,
+				E219C4371ED0333A00A27444 /* StockTimer.swift */,
+				E2A10B7A1ECCD31700A967BA /* Observable.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		E219C43A1ED0335600A27444 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2A10B7C1ECCD35100A967BA /* Stock.swift */,
+				E2A10B801ECDA43100A967BA /* SupportedStock.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E219C43F1ED0625100A27444 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E219C4401ED0626500A27444 /* MockNetworkingManager.swift */,
+				E219C4441ED068C600A27444 /* MockHTMLParser.swift */,
+				E219C4461ED0698300A27444 /* MockTimer.swift */,
+				E219C4421ED0676F00A27444 /* MockStockListViewController.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 		E2A10B571ECC9CC600A967BA = {
@@ -119,9 +177,8 @@
 				E2A10B7E1ECCD5A600A967BA /* StockListCell.swift */,
 				E2A10B771ECCD2D100A967BA /* StockListViewController.swift */,
 				E2A10B751ECCD2BE00A967BA /* StockListViewModel.swift */,
-				E2A10B7C1ECCD35100A967BA /* Stock.swift */,
-				E2A10B801ECDA43100A967BA /* SupportedStock.swift */,
-				E2A10B7A1ECCD31700A967BA /* Observable.swift */,
+				E219C43A1ED0335600A27444 /* Models */,
+				E219C4391ED0334700A27444 /* Helpers */,
 				E2A10B791ECCD2D800A967BA /* Support */,
 			);
 			path = stooq;
@@ -204,6 +261,7 @@
 				TargetAttributes = {
 					E219C4261ED02C7700A27444 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E2A10B5F1ECC9CC600A967BA;
 					};
@@ -237,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E219C43C1ED05D7E00A27444 /* website.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +409,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E219C43E1ED05F4300A27444 /* StockHTMLParserTests.swift in Sources */,
+				E219C4471ED0698300A27444 /* MockTimer.swift in Sources */,
+				E219C4451ED068C600A27444 /* MockHTMLParser.swift in Sources */,
+				E219C4321ED02D4B00A27444 /* StockListViewModelTests.swift in Sources */,
+				E219C4411ED0626500A27444 /* MockNetworkingManager.swift in Sources */,
+				E219C4431ED0676F00A27444 /* MockStockListViewController.swift in Sources */,
+				E219C4491ED078ED00A27444 /* StockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,12 +423,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E219C4381ED0333A00A27444 /* StockTimer.swift in Sources */,
+				E219C4361ED0332F00A27444 /* StockNetworkingManager.swift in Sources */,
 				E2A10B7F1ECCD5A600A967BA /* StockListCell.swift in Sources */,
 				E2A10B7B1ECCD31700A967BA /* Observable.swift in Sources */,
 				E2A10B781ECCD2D100A967BA /* StockListViewController.swift in Sources */,
 				E2A10B761ECCD2BE00A967BA /* StockListViewModel.swift in Sources */,
 				E2A10B7D1ECCD35100A967BA /* Stock.swift in Sources */,
 				E2A10B641ECC9CC600A967BA /* AppDelegate.swift in Sources */,
+				E219C4341ED0331A00A27444 /* StockHTMLParser.swift in Sources */,
 				E2A10B811ECDA43100A967BA /* SupportedStock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,10 +463,12 @@
 			baseConfigurationReference = E0FF2455C9F2BF70EA327B57 /* Pods-stooqTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = stooqTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kk-lab.stooqTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stooq.app/stooq";
 			};
@@ -408,6 +479,7 @@
 			baseConfigurationReference = 7A0AB68A4F0D3C95B568EF79 /* Pods-stooqTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = stooqTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kk-lab.stooqTests";
