@@ -9,27 +9,21 @@
 import Foundation
 
 protocol TimerProtocol {
-    init(timeInterval: TimeInterval)
     func attachCompletion(completion: @escaping () -> Void)
-    func start()
+    func start(withTimeInterval: TimeInterval)
     func stop()
 }
 
 class StockTimer: TimerProtocol {
     fileprivate var timer: Timer?
     fileprivate var completion: (() -> Void)?
-    fileprivate let timeInterval: TimeInterval
-    
-    required init(timeInterval: TimeInterval) {
-        self.timeInterval = timeInterval
-    }
     
     func attachCompletion(completion: @escaping () -> Void) {
         self.completion = completion
     }
     
-    func start() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: self.timeInterval, repeats: true) { [weak self] _ in
+    func start(withTimeInterval timeInterval: TimeInterval) {
+        self.timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { [weak self] _ in
             self?.completion?()
         }
     }

@@ -20,6 +20,7 @@
 		E219C4451ED068C600A27444 /* MockHTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4441ED068C600A27444 /* MockHTMLParser.swift */; };
 		E219C4471ED0698300A27444 /* MockTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4461ED0698300A27444 /* MockTimer.swift */; };
 		E219C4491ED078ED00A27444 /* StockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C4481ED078ED00A27444 /* StockTests.swift */; };
+		E219C44B1ED09A6000A27444 /* UISegmentedControl+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219C44A1ED09A6000A27444 /* UISegmentedControl+Segment.swift */; };
 		E2A10B641ECC9CC600A967BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B631ECC9CC600A967BA /* AppDelegate.swift */; };
 		E2A10B6B1ECC9CC600A967BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */; };
 		E2A10B6E1ECC9CC600A967BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B6C1ECC9CC600A967BA /* LaunchScreen.storyboard */; };
@@ -61,6 +62,7 @@
 		E219C4441ED068C600A27444 /* MockHTMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHTMLParser.swift; sourceTree = "<group>"; };
 		E219C4461ED0698300A27444 /* MockTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimer.swift; sourceTree = "<group>"; };
 		E219C4481ED078ED00A27444 /* StockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTests.swift; sourceTree = "<group>"; };
+		E219C44A1ED09A6000A27444 /* UISegmentedControl+Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Segment.swift"; sourceTree = "<group>"; };
 		E2A10B601ECC9CC600A967BA /* stooq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stooq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A10B631ECC9CC600A967BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 			name = Mocks;
 			sourceTree = "<group>";
 		};
+		E219C44C1ED09CFC00A27444 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E219C44A1ED09A6000A27444 /* UISegmentedControl+Segment.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E2A10B571ECC9CC600A967BA = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 				E2A10B751ECCD2BE00A967BA /* StockListViewModel.swift */,
 				E219C43A1ED0335600A27444 /* Models */,
 				E219C4391ED0334700A27444 /* Helpers */,
+				E219C44C1ED09CFC00A27444 /* Extensions */,
 				E2A10B791ECCD2D800A967BA /* Support */,
 			);
 			path = stooq;
@@ -429,6 +440,7 @@
 				E2A10B7B1ECCD31700A967BA /* Observable.swift in Sources */,
 				E2A10B781ECCD2D100A967BA /* StockListViewController.swift in Sources */,
 				E2A10B761ECCD2BE00A967BA /* StockListViewModel.swift in Sources */,
+				E219C44B1ED09A6000A27444 /* UISegmentedControl+Segment.swift in Sources */,
 				E2A10B7D1ECCD35100A967BA /* Stock.swift in Sources */,
 				E2A10B641ECC9CC600A967BA /* AppDelegate.swift in Sources */,
 				E219C4341ED0331A00A27444 /* StockHTMLParser.swift in Sources */,

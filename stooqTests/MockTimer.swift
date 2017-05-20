@@ -10,15 +10,17 @@ import Foundation
 @testable import stooq
 
 class MockTimer: TimerProtocol {
-    fileprivate let timeInterval: TimeInterval
     fileprivate var completion: (() -> Void)?
+    fileprivate(set) var timeInterval: TimeInterval
+    let defaultTimeInterval: TimeInterval = 30.0
     
     var didCallStart: Bool = false
     var didCallStop: Bool = false
     var didCallCompletion: Bool = false
+    var didChangeTimeInterval: Bool = false
     
-    required init(timeInterval: TimeInterval) {
-        self.timeInterval = timeInterval
+    init() {
+        self.timeInterval = self.defaultTimeInterval
     }
     
     func attachCompletion(completion: @escaping () -> Void) {
@@ -28,7 +30,13 @@ class MockTimer: TimerProtocol {
         }
     }
     
-    func start() {
+    func start(withTimeInterval timeInterval: TimeInterval) {
+        self.timeInterval = timeInterval
+        
+        if timeInterval != self.defaultTimeInterval {
+            self.didChangeTimeInterval = true
+        }
+        
         self.didCallStart = true
         self.completion?()
     }

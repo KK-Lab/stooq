@@ -21,7 +21,7 @@ class StockListViewModelTests: XCTestCase {
         
         self.parser = MockHTMLParser()
         self.networkingManager = MockNetworkingManager()
-        self.timer = MockTimer(timeInterval: 30.0)
+        self.timer = MockTimer()
         
         self.stockListViewModel = StockListViewModel(networkingManager: networkingManager, htmlParser: parser, timer: timer)
         self.stockListViewController = MockStockListViewController()
@@ -32,6 +32,8 @@ class StockListViewModelTests: XCTestCase {
         XCTAssertFalse(self.timer.didCallCompletion)
         XCTAssertFalse(self.timer.didCallStart)
         XCTAssertFalse(self.timer.didCallStop)
+        XCTAssertFalse(self.timer.didChangeTimeInterval)
+        XCTAssertEqual(self.timer.defaultTimeInterval, 30.0)
         
         XCTAssertFalse(self.networkingManager.didRequestWebsiteWithSuccess)
         
@@ -77,4 +79,17 @@ class StockListViewModelTests: XCTestCase {
         XCTAssert(self.stockListViewController.didGetError)
     }
     
+    func testChangingUpdateTimeIntervalToTenSeconds() {
+        self.stockListViewController.changeSegmentedControlSegment(to: .first)
+        
+        XCTAssert(self.timer.didChangeTimeInterval)
+        XCTAssertEqual(self.timer.timeInterval, UISegmentedControl.Segment.first.value)
+    }
+    
+    func testChangingUpdateTimeIntervalToTwentySeconds() {
+        self.stockListViewController.changeSegmentedControlSegment(to: .second)
+        
+        XCTAssert(self.timer.didChangeTimeInterval)
+        XCTAssertEqual(self.timer.timeInterval, UISegmentedControl.Segment.second.value)
+    }
 }

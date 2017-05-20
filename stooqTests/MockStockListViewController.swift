@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 @testable import stooq
 
 class MockStockListViewController {
@@ -27,5 +28,9 @@ class MockStockListViewController {
                 }
             }
         }
+    }
+    
+    func changeSegmentedControlSegment(to segment: UISegmentedControl.Segment) {
+        self.viewModel?.changeUpdateTimeInterval(to: segment.value)
     }
 }

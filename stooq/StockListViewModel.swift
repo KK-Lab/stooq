@@ -15,6 +15,8 @@ class StockListViewModel {
     fileprivate let networkingManager: NetworkingManagerProtocol
     fileprivate let htmlParser: HTMLParserProtocol
     
+    fileprivate var updateTimeInterval: TimeInterval = 30.0
+    
     fileprivate lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm:ss"
@@ -24,18 +26,18 @@ class StockListViewModel {
     let stocksObservable: Observable<[Stock]>
     let errorObservable: Observable<Bool>
     
-    var updateTime: String? {
-        var updateTime: String? = nil
+    var updateTimeString: String? {
+        var updateTimeString: String? = nil
         
         if let updateDate = self.updateDate {
-            updateTime = self.dateFormatter.string(from: updateDate)
+            updateTimeString = self.dateFormatter.string(from: updateDate)
         }
         
-        return updateTime
+        return updateTimeString
     }
     
     convenience init() {
-        self.init(networkingManager: StockNetworkingManager(), htmlParser: StockHTMLParser(), timer: StockTimer(timeInterval: 30.0))
+        self.init(networkingManager: StockNetworkingManager(), htmlParser: StockHTMLParser(), timer: StockTimer())
     }
     
     init(networkingManager: NetworkingManagerProtocol, htmlParser: HTMLParserProtocol, timer: TimerProtocol) {
@@ -54,11 +56,17 @@ class StockListViewModel {
     }
     
     func startTimer() {
-        self.timer.start()
+        self.timer.start(withTimeInterval: self.updateTimeInterval)
     }
     
     func stopTimer() {
         self.timer.stop()
+    }
+    
+    func changeUpdateTimeInterval(to updateTimeInterval: TimeInterval) {
+        self.stopTimer()
+        self.updateTimeInterval = updateTimeInterval
+        self.startTimer()
     }
 }
 

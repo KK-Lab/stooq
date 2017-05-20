@@ -31,6 +31,7 @@ class StockListViewController: UITableViewController {
         super.viewDidLoad()
         
         self.setupNavigationBar()
+        self.setupSegmentedControl()
         self.setupTableView()
     }
     
@@ -60,7 +61,7 @@ extension StockListViewController {
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let updateTime = self.viewModel?.updateTime else { return nil }
+        guard let updateTime = self.viewModel?.updateTimeString else { return nil }
         
         let headerFrame = CGRect(x: 0, y: 5, width: UIScreen.main.bounds.width, height: 35)
         let view = UIView(frame: headerFrame)
@@ -78,21 +79,24 @@ extension StockListViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.viewModel?.updateTime == nil ? 0 : 40
+        return self.viewModel?.updateTimeString == nil ? 0 : 40
     }
 }
 
 fileprivate extension StockListViewController {
     
     func setupNavigationBar() {
-        self.title = "stooq.pl"
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
-        self.navigationController?.navigationBar.titleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.white,
-            NSFontAttributeName: UIFont.italicSystemFont(ofSize: 23)
-        ]
+    }
+    
+    func setupSegmentedControl() {
+        let segmentedControl = UISegmentedControl(segments: UISegmentedControl.Segment.all)
+        segmentedControl.tintColor = UIColor.white
+        segmentedControl.selectedSegmentIndex = UISegmentedControl.Segment.third.index
+        segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(sender:)), for: .valueChanged)
+        self.navigationItem.titleView = segmentedControl
     }
     
     func setupTableView() {
@@ -107,5 +111,12 @@ fileprivate extension StockListViewController {
         let alert = UIAlertController(title: "Error", message: "Something went wrong. Check your network connection and click OK to try again", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { _ in self.viewModel?.fetchStocksAndStartTimer() }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc
+    func segmentedControlValueChanged(sender: UISegmentedControl) {
+        guard let segment = UISegmentedControl.Segment(index: sender.selectedSegmentIndex) else { return }
+        
+        self.viewModel?.changeUpdateTimeInterval(to: segment.value)
     }
 }
