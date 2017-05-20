@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04275CE30F63AC6A968F8F19B44E6A05 /* Pods-stooq-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EB7778E972707D1C409742CBD67300 /* Pods-stooq-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04275CE30F63AC6A968F8F19B44E6A05 /* Pods-stooq-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BADC626142AF8342FDD6FBCE47FB8BA4 /* Pods-stooq-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08700CBB713B443AFA394EFD6B74E402 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533EF471DEF73B1BAA165B447BDECA85 /* libxmlHTMLNode.swift */; };
 		322F32F75AC8A04064F70A089800AF88 /* Kanna-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 349C621B06592780F4D407EF354815EF /* Kanna-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DB400D8B8AADDF43E1439E3441E814B /* Kanna-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E773DB4BA0F7ED0C94EAFA8C0ED2DAD8 /* Kanna-dummy.m */; };
 		436871564BF1C99AA86206B69CDB40DD /* Kanna.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C01807B7A740FB509C0A5BC9E2FB597 /* Kanna.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4453CF3E64879E1245426DCABDA3C36B /* Pods-stooq-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C5B753C05A28B46A5470C6890D9D17 /* Pods-stooq-dummy.m */; };
+		4453CF3E64879E1245426DCABDA3C36B /* Pods-stooq-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C155724048959DA75C3609F470925B92 /* Pods-stooq-dummy.m */; };
 		634F01C0D06986FD15F647234ADA7CBC /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6D38A36580A05D39E99551CC6752E /* Kanna.swift */; };
 		6ADDB372030582054CAE4F5CF6431613 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6FF2A9EB6B0FBF8C1433B74C3DA484D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		781A4D12CC4A83EA4705C6029254B012 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040D43135A5A6C37004F1BBF4C49942 /* libxmlHTMLDocument.swift */; };
+		82034F73CE4314F802A8AB38687A77A3 /* Pods-stooqTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7492F0A23E41413D408A1D2F4F1AFB3D /* Pods-stooqTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF863C36D259D89189A0BDF54912C76E /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B0F54E87FD450F287E216B164791B /* CSS.swift */; };
+		B49B6937697179B3A34563450DAFCA9C /* Pods-stooqTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0C6179B7A53408F40DA5026DBF0F4 /* Pods-stooqTests-dummy.m */; };
+		E33A73A81680B09FE32F142DF0B62B14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FD87F8764674EFAAF3AABCA2552E5127 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED7164FE687D5C00EFF2F075A8A22F5 /* libxmlParserOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		379984395A5181AEC79FEB1E1B37480C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D10E4FF5A483B852B47CCA0B994E340;
+			remoteInfo = Kanna;
+		};
 		EF770EF57C4ED0AE60E3FB87B9FAFAFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -32,32 +42,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01A64AD467C333C9B64CE809F29C4294 /* Pods-stooq-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-stooq-resources.sh"; sourceTree = "<group>"; };
-		0C6CD5882BE33B61FD0818A318E2E8B4 /* Pods-stooq-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-stooq-acknowledgements.plist"; sourceTree = "<group>"; };
-		113EA91D52EA320BCA1F38DF3D786C47 /* Pods-stooq.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-stooq.modulemap"; sourceTree = "<group>"; };
+		141C784F5B0B76AC36A84767A49DA69D /* Pods-stooq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-stooq.debug.xcconfig"; sourceTree = "<group>"; };
 		1ED7164FE687D5C00EFF2F075A8A22F5 /* libxmlParserOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = Sources/Kanna/libxmlParserOption.swift; sourceTree = "<group>"; };
+		22A3B09CFA11E6D80B4519D47270EFCD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		239C1E844346CDC540338048D81DA068 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26D3A8DB45275ED86ECE18369957F124 /* Pods-stooqTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-stooqTests.modulemap"; sourceTree = "<group>"; };
 		2C01807B7A740FB509C0A5BC9E2FB597 /* Kanna.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kanna.h; path = Sources/Kanna/Kanna.h; sourceTree = "<group>"; };
-		2D13CA0294B40F02C30DB59BEC4AD4BF /* Pods-stooq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-stooq.debug.xcconfig"; sourceTree = "<group>"; };
+		2D8FD253B6E461FD87DE004DE54AA376 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kanna.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		349C621B06592780F4D407EF354815EF /* Kanna-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-umbrella.h"; sourceTree = "<group>"; };
-		4DE1FCEDE96C9FB6BF3DB86DDFDBE8B8 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kanna.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447F064C2C850F4D9F6A5CA4531932C2 /* Pods-stooq-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-stooq-acknowledgements.plist"; sourceTree = "<group>"; };
+		4D3AD4A92FC45A87DE1067F9185EA549 /* Pods-stooqTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-stooqTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4EADF88734C5D83808BA537A4E64C90C /* Pods-stooq.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-stooq.modulemap"; sourceTree = "<group>"; };
+		4FD0C6179B7A53408F40DA5026DBF0F4 /* Pods-stooqTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-stooqTests-dummy.m"; sourceTree = "<group>"; };
+		524BACCB25BECA203BEF0A282817E5CA /* Pods-stooq-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-stooq-resources.sh"; sourceTree = "<group>"; };
 		533EF471DEF73B1BAA165B447BDECA85 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = Sources/Kanna/libxmlHTMLNode.swift; sourceTree = "<group>"; };
-		62737888974D65847179D625D224593D /* Pods-stooq-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-stooq-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		714B0F54E87FD450F287E216B164791B /* CSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = Sources/Kanna/CSS.swift; sourceTree = "<group>"; };
+		73C7899895FFB2A96C1520D969A87466 /* Pods-stooqTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-stooqTests-resources.sh"; sourceTree = "<group>"; };
+		7492F0A23E41413D408A1D2F4F1AFB3D /* Pods-stooqTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-stooqTests-umbrella.h"; sourceTree = "<group>"; };
 		868E84C6C7BD431BCC2F1FCB49445351 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86EB7778E972707D1C409742CBD67300 /* Pods-stooq-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-stooq-umbrella.h"; sourceTree = "<group>"; };
+		8DD36F9E6A34325C4E85B76629DC18C4 /* Pods-stooqTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-stooqTests.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C536078EC6B1CE2E23CF90E3C61F0BE /* Pods-stooq-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-stooq-frameworks.sh"; sourceTree = "<group>"; };
+		A937F35A14A5836722839C11060F81DB /* Pods-stooqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-stooqTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADA15C31DA481B7DA8ACE84EA931FE8D /* Kanna-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-prefix.pch"; sourceTree = "<group>"; };
 		ADB1B2A10CD6FD3EC3E960A4C0C06EBD /* Kanna.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kanna.xcconfig; sourceTree = "<group>"; };
-		B6C5B753C05A28B46A5470C6890D9D17 /* Pods-stooq-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-stooq-dummy.m"; sourceTree = "<group>"; };
 		B7B6D38A36580A05D39E99551CC6752E /* Kanna.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kanna.swift; path = Sources/Kanna/Kanna.swift; sourceTree = "<group>"; };
 		B8F51B4C6185C946595BB8EA408F96D7 /* Kanna.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kanna.modulemap; sourceTree = "<group>"; };
-		BE71E782762870BD7BD89AE30819E4B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D32CEF6A42C3D8DFA1246DAD41CA8A0B /* Pods_stooq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_stooq.framework; path = "Pods-stooq.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB55813B58CA79165FF0E1168752707F /* Pods-stooq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-stooq.release.xcconfig"; sourceTree = "<group>"; };
+		BADC626142AF8342FDD6FBCE47FB8BA4 /* Pods-stooq-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-stooq-umbrella.h"; sourceTree = "<group>"; };
+		C155724048959DA75C3609F470925B92 /* Pods-stooq-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-stooq-dummy.m"; sourceTree = "<group>"; };
+		C228CD45B681AE32D4A2CA84CEA2BDEC /* Pods-stooq-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-stooq-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E040D43135A5A6C37004F1BBF4C49942 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = Sources/Kanna/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		E3BB59A93F3E8D68FCCD2382DD9E2ACE /* Pods-stooqTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-stooqTests-frameworks.sh"; sourceTree = "<group>"; };
 		E773DB4BA0F7ED0C94EAFA8C0ED2DAD8 /* Kanna-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kanna-dummy.m"; sourceTree = "<group>"; };
-		FD3DE4C17F947D4522ED8047FD4AB8B6 /* Pods-stooq-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-stooq-frameworks.sh"; sourceTree = "<group>"; };
+		E7DF02B4C01784F5A98CAF59B0476465 /* Pods_stooqTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_stooqTests.framework; path = "Pods-stooqTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EAAAF6BC99CE88075EC905201C24D9 /* Pods_stooq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_stooq.framework; path = "Pods-stooq.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83213AC9300E7825EA57A38AFB0DC3F /* Pods-stooq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-stooq.release.xcconfig"; sourceTree = "<group>"; };
+		FD73C3333F83622472C513B2162BEAF0 /* Pods-stooqTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-stooqTests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +87,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FF2A9EB6B0FBF8C1433B74C3DA484D2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813ADC3F6076EDED6AE89325F91CEFD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E33A73A81680B09FE32F142DF0B62B14 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +115,16 @@
 				45BD653DF89182FEA0B12AF0477F654C /* Kanna */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		18CA43461DA67B3AF9EB0789ED6DA7E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D8FD253B6E461FD87DE004DE54AA376 /* Kanna.framework */,
+				F4EAAAF6BC99CE88075EC905201C24D9 /* Pods_stooq.framework */,
+				E7DF02B4C01784F5A98CAF59B0476465 /* Pods_stooqTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		2B0656BF2976E89BA0EE5AA6CF7092CF /* Support Files */ = {
@@ -117,50 +156,24 @@
 			path = Kanna;
 			sourceTree = "<group>";
 		};
-		600A5817FD38629ABF88DA36C866B0DC /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6E32F2DF7851C3F1A6CBFA7B746A0415 /* Pods-stooq */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6E32F2DF7851C3F1A6CBFA7B746A0415 /* Pods-stooq */ = {
-			isa = PBXGroup;
-			children = (
-				BE71E782762870BD7BD89AE30819E4B4 /* Info.plist */,
-				113EA91D52EA320BCA1F38DF3D786C47 /* Pods-stooq.modulemap */,
-				62737888974D65847179D625D224593D /* Pods-stooq-acknowledgements.markdown */,
-				0C6CD5882BE33B61FD0818A318E2E8B4 /* Pods-stooq-acknowledgements.plist */,
-				B6C5B753C05A28B46A5470C6890D9D17 /* Pods-stooq-dummy.m */,
-				FD3DE4C17F947D4522ED8047FD4AB8B6 /* Pods-stooq-frameworks.sh */,
-				01A64AD467C333C9B64CE809F29C4294 /* Pods-stooq-resources.sh */,
-				86EB7778E972707D1C409742CBD67300 /* Pods-stooq-umbrella.h */,
-				2D13CA0294B40F02C30DB59BEC4AD4BF /* Pods-stooq.debug.xcconfig */,
-				DB55813B58CA79165FF0E1168752707F /* Pods-stooq.release.xcconfig */,
-			);
-			name = "Pods-stooq";
-			path = "Target Support Files/Pods-stooq";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				0B2A79FB1A0189C35E82956502701321 /* Pods */,
-				A431867EFCC1EF99F9A11A75CA359CC7 /* Products */,
-				600A5817FD38629ABF88DA36C866B0DC /* Targets Support Files */,
+				18CA43461DA67B3AF9EB0789ED6DA7E7 /* Products */,
+				B20E2B85AAC41542E689F0CEBFF52096 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A431867EFCC1EF99F9A11A75CA359CC7 /* Products */ = {
+		B20E2B85AAC41542E689F0CEBFF52096 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4DE1FCEDE96C9FB6BF3DB86DDFDBE8B8 /* Kanna.framework */,
-				D32CEF6A42C3D8DFA1246DAD41CA8A0B /* Pods_stooq.framework */,
+				C25262EC2EA13F32117F795BBAD28380 /* Pods-stooq */,
+				D4B3FD700379F380F30333A946F8021D /* Pods-stooqTests */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -171,6 +184,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C25262EC2EA13F32117F795BBAD28380 /* Pods-stooq */ = {
+			isa = PBXGroup;
+			children = (
+				22A3B09CFA11E6D80B4519D47270EFCD /* Info.plist */,
+				4EADF88734C5D83808BA537A4E64C90C /* Pods-stooq.modulemap */,
+				C228CD45B681AE32D4A2CA84CEA2BDEC /* Pods-stooq-acknowledgements.markdown */,
+				447F064C2C850F4D9F6A5CA4531932C2 /* Pods-stooq-acknowledgements.plist */,
+				C155724048959DA75C3609F470925B92 /* Pods-stooq-dummy.m */,
+				9C536078EC6B1CE2E23CF90E3C61F0BE /* Pods-stooq-frameworks.sh */,
+				524BACCB25BECA203BEF0A282817E5CA /* Pods-stooq-resources.sh */,
+				BADC626142AF8342FDD6FBCE47FB8BA4 /* Pods-stooq-umbrella.h */,
+				141C784F5B0B76AC36A84767A49DA69D /* Pods-stooq.debug.xcconfig */,
+				F83213AC9300E7825EA57A38AFB0DC3F /* Pods-stooq.release.xcconfig */,
+			);
+			name = "Pods-stooq";
+			path = "Target Support Files/Pods-stooq";
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,9 +210,35 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		D4B3FD700379F380F30333A946F8021D /* Pods-stooqTests */ = {
+			isa = PBXGroup;
+			children = (
+				239C1E844346CDC540338048D81DA068 /* Info.plist */,
+				26D3A8DB45275ED86ECE18369957F124 /* Pods-stooqTests.modulemap */,
+				4D3AD4A92FC45A87DE1067F9185EA549 /* Pods-stooqTests-acknowledgements.markdown */,
+				FD73C3333F83622472C513B2162BEAF0 /* Pods-stooqTests-acknowledgements.plist */,
+				4FD0C6179B7A53408F40DA5026DBF0F4 /* Pods-stooqTests-dummy.m */,
+				E3BB59A93F3E8D68FCCD2382DD9E2ACE /* Pods-stooqTests-frameworks.sh */,
+				73C7899895FFB2A96C1520D969A87466 /* Pods-stooqTests-resources.sh */,
+				7492F0A23E41413D408A1D2F4F1AFB3D /* Pods-stooqTests-umbrella.h */,
+				A937F35A14A5836722839C11060F81DB /* Pods-stooqTests.debug.xcconfig */,
+				8DD36F9E6A34325C4E85B76629DC18C4 /* Pods-stooqTests.release.xcconfig */,
+			);
+			name = "Pods-stooqTests";
+			path = "Target Support Files/Pods-stooqTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		33DA86C323A02A3AA7D162FB9291381A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82034F73CE4314F802A8AB38687A77A3 /* Pods-stooqTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FD0A8270C713B83BDC7EED02A91D976 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,7 +274,7 @@
 			);
 			name = "Pods-stooq";
 			productName = "Pods-stooq";
-			productReference = D32CEF6A42C3D8DFA1246DAD41CA8A0B /* Pods_stooq.framework */;
+			productReference = F4EAAAF6BC99CE88075EC905201C24D9 /* Pods_stooq.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4D10E4FF5A483B852B47CCA0B994E340 /* Kanna */ = {
@@ -234,7 +291,25 @@
 			);
 			name = Kanna;
 			productName = Kanna;
-			productReference = 4DE1FCEDE96C9FB6BF3DB86DDFDBE8B8 /* Kanna.framework */;
+			productReference = 2D8FD253B6E461FD87DE004DE54AA376 /* Kanna.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F1E6292294257DA1C0DD4FD3127FB0A /* Pods-stooqTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A74C9E5E8030D72E92D6BEF4F3E9649 /* Build configuration list for PBXNativeTarget "Pods-stooqTests" */;
+			buildPhases = (
+				1231A327E7B219F29E280082B3166490 /* Sources */,
+				813ADC3F6076EDED6AE89325F91CEFD7 /* Frameworks */,
+				33DA86C323A02A3AA7D162FB9291381A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D18FCC86EFEBA979C9074714BCD29B /* PBXTargetDependency */,
+			);
+			name = "Pods-stooqTests";
+			productName = "Pods-stooqTests";
+			productReference = E7DF02B4C01784F5A98CAF59B0476465 /* Pods_stooqTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -254,17 +329,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A431867EFCC1EF99F9A11A75CA359CC7 /* Products */;
+			productRefGroup = 18CA43461DA67B3AF9EB0789ED6DA7E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4D10E4FF5A483B852B47CCA0B994E340 /* Kanna */,
 				36891EB3D80236349115813414B635B0 /* Pods-stooq */,
+				9F1E6292294257DA1C0DD4FD3127FB0A /* Pods-stooqTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1231A327E7B219F29E280082B3166490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49B6937697179B3A34563450DAFCA9C /* Pods-stooqTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		252B13ABC5AE0EA65897098097C1703E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,12 +379,57 @@
 			target = 4D10E4FF5A483B852B47CCA0B994E340 /* Kanna */;
 			targetProxy = EF770EF57C4ED0AE60E3FB87B9FAFAFB /* PBXContainerItemProxy */;
 		};
+		D7D18FCC86EFEBA979C9074714BCD29B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kanna;
+			target = 4D10E4FF5A483B852B47CCA0B994E340 /* Kanna */;
+			targetProxy = 379984395A5181AEC79FEB1E1B37480C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		03437B3594C1EE7E8148A55C6AD2406B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A937F35A14A5836722839C11060F81DB /* Pods-stooqTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-stooqTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-stooqTests/Pods-stooqTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_stooqTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		11A64599382785B05BC8FFAA455B52AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB55813B58CA79165FF0E1168752707F /* Pods-stooq.release.xcconfig */;
+			baseConfigurationReference = F83213AC9300E7825EA57A38AFB0DC3F /* Pods-stooq.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -497,9 +626,47 @@
 			};
 			name = Debug;
 		};
+		F8113608CED212412510F203584C8AA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DD36F9E6A34325C4E85B76629DC18C4 /* Pods-stooqTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-stooqTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-stooqTests/Pods-stooqTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_stooqTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FAE247DFBD39A721AE65DBF64E9C5901 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D13CA0294B40F02C30DB59BEC4AD4BF /* Pods-stooq.debug.xcconfig */;
+			baseConfigurationReference = 141C784F5B0B76AC36A84767A49DA69D /* Pods-stooq.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -544,6 +711,15 @@
 			buildConfigurations = (
 				A0FC3F2D8937D5BE40976F723A721184 /* Debug */,
 				72BE85622B9063C743961E1463F9795D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A74C9E5E8030D72E92D6BEF4F3E9649 /* Build configuration list for PBXNativeTarget "Pods-stooqTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03437B3594C1EE7E8148A55C6AD2406B /* Debug */,
+				F8113608CED212412510F203584C8AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

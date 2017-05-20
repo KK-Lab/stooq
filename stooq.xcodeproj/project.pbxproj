@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578A791F81638C5943246413 /* Pods_stooqTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230ECBE9F334DDA61217218F /* Pods_stooqTests.framework */; };
 		C79D7AD50D8741CDD5F380A3 /* Pods_stooq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E730C11FC36B74D77EFCC051 /* Pods_stooq.framework */; };
 		E2A10B641ECC9CC600A967BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A10B631ECC9CC600A967BA /* AppDelegate.swift */; };
 		E2A10B6B1ECC9CC600A967BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */; };
@@ -20,9 +21,24 @@
 		E2A10B8E1ECEB91D00A967BA /* StockListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A10B8C1ECEB91D00A967BA /* StockListCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E219C42C1ED02C7700A27444 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2A10B581ECC9CC600A967BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2A10B5F1ECC9CC600A967BA;
+			remoteInfo = stooq;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		230ECBE9F334DDA61217218F /* Pods_stooqTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stooqTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3794958692673E14D8319F1C /* Pods-stooq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stooq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stooq/Pods-stooq.debug.xcconfig"; sourceTree = "<group>"; };
+		7A0AB68A4F0D3C95B568EF79 /* Pods-stooqTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stooqTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-stooqTests/Pods-stooqTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8860ECC38AD8E4D373EDCEC /* Pods-stooq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stooq.release.xcconfig"; path = "Pods/Target Support Files/Pods-stooq/Pods-stooq.release.xcconfig"; sourceTree = "<group>"; };
+		E0FF2455C9F2BF70EA327B57 /* Pods-stooqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stooqTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stooqTests/Pods-stooqTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E219C4271ED02C7700A27444 /* stooqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stooqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E219C42B1ED02C7700A27444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A10B601ECC9CC600A967BA /* stooq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stooq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A10B631ECC9CC600A967BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2A10B6A1ECC9CC600A967BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +55,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E219C4241ED02C7700A27444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578A791F81638C5943246413 /* Pods_stooqTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A10B5D1ECC9CC600A967BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,14 +78,24 @@
 			isa = PBXGroup;
 			children = (
 				E730C11FC36B74D77EFCC051 /* Pods_stooq.framework */,
+				230ECBE9F334DDA61217218F /* Pods_stooqTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E219C4281ED02C7700A27444 /* stooqTests */ = {
+			isa = PBXGroup;
+			children = (
+				E219C42B1ED02C7700A27444 /* Info.plist */,
+			);
+			path = stooqTests;
 			sourceTree = "<group>";
 		};
 		E2A10B571ECC9CC600A967BA = {
 			isa = PBXGroup;
 			children = (
 				E2A10B621ECC9CC600A967BA /* stooq */,
+				E219C4281ED02C7700A27444 /* stooqTests */,
 				E2A10B611ECC9CC600A967BA /* Products */,
 				F87A7C21C34F6269525E3284 /* Pods */,
 				9FECF651126C279E4434FA08 /* Frameworks */,
@@ -72,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E2A10B601ECC9CC600A967BA /* stooq.app */,
+				E219C4271ED02C7700A27444 /* stooqTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +142,8 @@
 			children = (
 				3794958692673E14D8319F1C /* Pods-stooq.debug.xcconfig */,
 				A8860ECC38AD8E4D373EDCEC /* Pods-stooq.release.xcconfig */,
+				E0FF2455C9F2BF70EA327B57 /* Pods-stooqTests.debug.xcconfig */,
+				7A0AB68A4F0D3C95B568EF79 /* Pods-stooqTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -114,6 +151,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E219C4261ED02C7700A27444 /* stooqTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E219C4301ED02C7700A27444 /* Build configuration list for PBXNativeTarget "stooqTests" */;
+			buildPhases = (
+				839FE5E0BEFBBC48F82F9A4E /* [CP] Check Pods Manifest.lock */,
+				E219C4231ED02C7700A27444 /* Sources */,
+				E219C4241ED02C7700A27444 /* Frameworks */,
+				E219C4251ED02C7700A27444 /* Resources */,
+				9FB442AF298D4D43B3F79B54 /* [CP] Embed Pods Frameworks */,
+				17117DFFF00D128B6D19606B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E219C42D1ED02C7700A27444 /* PBXTargetDependency */,
+			);
+			name = stooqTests;
+			productName = stooqTests;
+			productReference = E219C4271ED02C7700A27444 /* stooqTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E2A10B5F1ECC9CC600A967BA /* stooq */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2A10B721ECC9CC600A967BA /* Build configuration list for PBXNativeTarget "stooq" */;
@@ -144,6 +202,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "KK-Lab";
 				TargetAttributes = {
+					E219C4261ED02C7700A27444 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2A10B5F1ECC9CC600A967BA;
+					};
 					E2A10B5F1ECC9CC600A967BA = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Manual;
@@ -164,11 +227,19 @@
 			projectRoot = "";
 			targets = (
 				E2A10B5F1ECC9CC600A967BA /* stooq */,
+				E219C4261ED02C7700A27444 /* stooqTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E219C4251ED02C7700A27444 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A10B5E1ECC9CC600A967BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +253,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17117DFFF00D128B6D19606B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stooqTests/Pods-stooqTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		247D792E63D961431FD5B947 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,9 +313,46 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stooq/Pods-stooq-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		839FE5E0BEFBBC48F82F9A4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB442AF298D4D43B3F79B54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stooqTests/Pods-stooqTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E219C4231ED02C7700A27444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2A10B5C1ECC9CC600A967BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +369,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E219C42D1ED02C7700A27444 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2A10B5F1ECC9CC600A967BA /* stooq */;
+			targetProxy = E219C42C1ED02C7700A27444 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		E2A10B6C1ECC9CC600A967BA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -258,6 +389,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E219C42E1ED02C7700A27444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0FF2455C9F2BF70EA327B57 /* Pods-stooqTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = stooqTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kk-lab.stooqTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stooq.app/stooq";
+			};
+			name = Debug;
+		};
+		E219C42F1ED02C7700A27444 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0AB68A4F0D3C95B568EF79 /* Pods-stooqTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = stooqTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kk-lab.stooqTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stooq.app/stooq";
+			};
+			name = Release;
+		};
 		E2A10B701ECC9CC600A967BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,6 +543,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E219C4301ED02C7700A27444 /* Build configuration list for PBXNativeTarget "stooqTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E219C42E1ED02C7700A27444 /* Debug */,
+				E219C42F1ED02C7700A27444 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E2A10B5B1ECC9CC600A967BA /* Build configuration list for PBXProject "stooq" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
